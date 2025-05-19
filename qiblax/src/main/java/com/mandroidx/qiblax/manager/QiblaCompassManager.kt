@@ -26,7 +26,7 @@ class QiblaCompassManager(
         .mapNotNull { azimuth -> getCompassState(azimuth) }
         .flowOn(Dispatchers.Default)
 
-    private fun getCompassState(azimuth: Float): CompassState? {
+    private suspend fun getCompassState(azimuth: Float): CompassState? {
         val location = locationProvider.getCurrentLocation() ?: return null
         val qiblaBearing =
             calculator.calculateQiblaBearing(location.latitude, location.longitude)
