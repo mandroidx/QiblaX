@@ -33,7 +33,7 @@ android {
 }
 
 group = "com.github.mandroidx.QiblaX"
-version = "1.0.2"
+version = "1.0.3"
 
 dependencies {
     implementation(libs.androidx.core.ktx)
